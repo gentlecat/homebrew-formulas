@@ -11,7 +11,7 @@ class Clippy < Formula
     (buildpath/"src/code.roman.zone/clippy").install buildpath.children
 
     cd "src/code.roman.zone/clippy" do
-      system "go", "build", "-o", bin/"clippy", "./cmd/clippy"
+      system "go", "build", "-o", bin/"clippy", "."
       prefix.install_metafiles
     end
   end
