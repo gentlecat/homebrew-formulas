@@ -11,7 +11,7 @@ class Publisher < Formula
     (buildpath/"src/code.roman.zone/publisher").install buildpath.children
 
     cd "src/code.roman.zone/publisher" do
-      system "go", "build", "-o", bin/"publisher", "./cmd/publisher"
+      system "go", "build", "-o", bin/"publisher", "."
       prefix.install_metafiles
     end
   end
